@@ -1,11 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20221025124633_CargaFormaPagamento.cs" />
+    <Compile Remove="Migrations\20221025124633_CargaFormaPagamento.Designer.cs" />
+    <Compile Remove="Migrations\20221103142709_test.cs" />
+    <Compile Remove="Migrations\20221103142709_test.Designer.cs" />
+    <Compile Remove="Migrations\20221103143040_PrimeiraVersaoBase.cs" />
+    <Compile Remove="Migrations\20221103143040_PrimeiraVersaoBase.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\QuickBuy.Dominio\QuickBuy.Dominio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.2" />
   </ItemGroup>
 
 </Project>
